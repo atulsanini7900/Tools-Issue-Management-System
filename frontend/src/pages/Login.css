@@ -1,0 +1,144 @@
+/* Premium Radial Glow behind Login Card */
+.auth-container {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-container::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(8px);
+}
+
+.login-card-custom {
+  position: relative;
+  overflow: visible;
+  padding: 3rem 2rem 2rem 2rem;
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Emblem/Badge at the Top of Card */
+.login-avatar-emblem {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background-color: var(--bg-surface);
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  box-shadow: 0 8px 24px var(--primary-glow);
+  animation: floatEmblem 3s ease-in-out infinite;
+}
+
+@keyframes floatEmblem {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -5px); }
+}
+
+/* Inputs with Icons */
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-box-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.input-pad-left {
+  padding-left: 2.75rem !important;
+}
+
+/* Premium Button Gradient */
+.login-btn-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%) !important;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.login-btn-gradient:hover {
+  background: linear-gradient(135deg, var(--primary-hover) 0%, #1e40af 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+}
+
+/* Compact Auto-fill Credentials Box */
+.login-demo-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.login-demo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--warning);
+  margin-bottom: 0.5rem;
+}
+
+.autofill-pill {
+  padding: 0.2rem 0.6rem !important;
+  font-size: 0.75rem !important;
+  border-radius: 9999px !important;
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  color: var(--warning) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  font-weight: 800 !important;
+  transition: all 0.2s ease;
+}
+
+.autofill-pill:hover {
+  background-color: var(--warning) !important;
+  color: #000 !important;
+  transform: scale(1.05);
+}
+
+.login-demo-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background-color: rgba(30, 41, 59, 0.3);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.login-demo-details p {
+  margin: 0;
+}
+
+.login-demo-details strong {
+  color: var(--text-primary);
+}

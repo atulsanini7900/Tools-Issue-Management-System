@@ -1,0 +1,52 @@
+.validation-helper {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.validation-helper .valid {
+  color: #10b981;
+}
+.validation-helper .invalid {
+  color: #ef4444;
+}
+
+.password-checker {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: rgba(15, 23, 42, 0.4);
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.checker-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.checker-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  margin-bottom: 0.2rem;
+}
+.checker-item:last-child {
+  margin-bottom: 0;
+}
+
+.checker-item .check {
+  font-weight: 800;
+  width: 14px;
+  display: inline-block;
+}
+.checker-item .check.valid {
+  color: #10b981;
+}
+.checker-item .check.invalid {
+  color: #ef4444;
+}
